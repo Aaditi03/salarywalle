@@ -1,0 +1,987 @@
+
+
+.background-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.5; /* Adjust opacity as needed */
+    z-index: -1; /* Ensures it stays behind the content */
+}
+
+.banner-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh;
+    padding: 4rem;
+    background-color: transparent; 
+    position: relative;
+    overflow: hidden; /* To ensure the image stays within the container */
+}
+
+/* Left Content Section */
+.content-left {
+    max-width: 1000px;
+    z-index: 10;
+    width: 50%; /* Ensure it takes half of the screen */
+}
+
+h1 {
+    font-family: "Lato", sans-serif;
+    color: #6c6a6a; /* Dark Gray text for better contrast on white */
+}
+
+p {
+    font-family: "Roboto", sans-serif;
+    color: rgb(96, 95, 95) !important; /* Dark Gray text for paragraph */
+    
+}
+
+/* Button Styling */
+button {
+    padding: 0.75rem 2rem;
+    border-radius: 9999px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    /* color: #fff; */
+    /* background-color: #6c6a6a;  */
+    border: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Button hover effect */
+button:hover {
+    background-color: #a39e9e; /* Darker button color on hover */
+}
+
+/* Right Image Styling */
+.image-container {
+    width: 50%; /* Ensures the image takes the right side */
+    position: relative;
+    height: 100%;
+}
+
+.banner-image {
+    position: absolute;
+    margin-top: -20px;
+    /* top: 0; */
+    /* left: 100px; */
+    /* width: 80%; */
+    height: 100%;
+    /* object-fit: cover; */
+    transition: transform 1s ease-in-out;
+}
+
+/* Image hover effect */
+.banner-image:hover {
+    transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .banner-container {
+        flex-direction: column;
+        justify-content: center;
+    }
+    .content-left {
+        text-align: center;
+        margin-bottom: 2rem;
+        width: 100%;
+    }
+    .image-container {
+        width: 100%;
+        margin-top: 2rem;
+    }
+}
+
+.financial-success-section {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #f7fafc;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    transition: opacity 0.6s, transform 0.6s;
+}
+
+.text-center {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.title {
+    font-size: 2rem;
+    font-weight: 800;
+    color: #2d3748;
+    margin-bottom: 1rem;
+    letter-spacing: 0.5px;
+}
+
+.description {
+    font-size: 1.125rem;
+    font-weight: 300;
+    color: #4a5568;
+    margin-bottom: 0.5rem;
+}
+
+.buttons-section {
+    display: flex;
+    justify-content: center;
+    margin-top: 1.5rem;
+}
+
+.contact-button {
+    background-color: #e2e8f0;
+    color: #2d3748;
+    padding: 0.75rem 1.5rem;
+    border-radius: 9999px;
+    font-weight: 600;
+    font-size: 1.125rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s;
+}
+
+.contact-button:hover {
+    background-color: #cbd5e0;
+}
+/* body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+} */
+
+/* Container Styles */
+.flex {
+    display: flex;
+}
+
+.flex-col {
+    flex-direction: column;
+}
+
+.md\\:flex-row {
+    flex-direction: row;
+}
+
+.items-center {
+    align-items: center;
+}
+
+.justify-between {
+    justify-content: space-between;
+}
+
+.gap-8 {
+    gap: 2rem;
+}
+
+.p-6 {
+    padding: 1.5rem;
+}
+
+/* GIF Section */
+.flex-shrink-0 {
+    flex-shrink: 0;
+}
+
+.w-full {
+    width: 100%;
+}
+
+/* .md\\:w-1\\/2 {
+    width: 50%;
+} */
+
+.justify-center {
+    justify-content: center;
+}
+
+img {
+    /* width: 100%; */
+    /* max-width: 20rem; */
+    border-radius: 0.5rem;
+    /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); */
+}
+
+/* Header Section */
+.bg-gradient-to-r {
+    background: linear-gradient(to right, #4299e1, #3182ce);
+}
+
+.text-white {
+    color: #fff;
+}
+
+.text-3xl {
+    font-size: 1.875rem;
+    font-weight: bold;
+}
+
+.text-lg {
+    font-size: 1.125rem;
+}
+
+.font-bold {
+    font-weight: bold;
+}
+
+.font-light {
+    font-weight: 300;
+}
+
+.rounded-lg {
+    border-radius: 0.5rem;
+}
+
+.shadow-lg {
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+.p-5 {
+    padding: 1.25rem;
+}
+
+/* Content Lines */
+.border-l-4 {
+    border-left-width: 4px;
+}
+
+.border-blue-500 {
+    border-color: #4299e1;
+}
+
+.border-green-500 {
+    border-color: #48bb78;
+}
+
+.border-yellow-500 {
+    border-color: #ecc94b;
+}
+
+.bg-blue-50 {
+    background-color: #ebf8ff;
+}
+
+.bg-green-50 {
+    background-color: #f0fff4;
+}
+
+.bg-yellow-50 {
+    background-color: #fffff0;
+}
+
+.text-blue-700 {
+    color: #2b6cb0;
+}
+
+.text-green-700 {
+    color: #2f855a;
+}
+
+.text-yellow-700 {
+    color: #d69e2e;
+}
+
+/* Features Section */
+.bg-gray-100 {
+    background-color: #f7fafc;
+}
+
+.text-gray-800 {
+    color: #2d3748;
+}
+
+.text-gray-600 {
+    color: #718096;
+}
+
+.mb-8 {
+    margin-bottom: 2rem;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.flex-wrap {
+    flex-wrap: wrap;
+}
+
+.gap-6 {
+    gap: 1.5rem;
+}
+
+/* Card Styles */
+.bg-white {
+    background-color: #fff;
+}
+
+.w-64 {
+    width: 16rem;
+}
+
+.h-64 {
+    height: 16rem;
+}
+
+.transition-all {
+    transition: all 0.3s ease;
+}
+
+.transform {
+    transform: scale(1);
+}
+
+.hover\\:scale-105:hover {
+    transform: scale(1.05);
+}
+
+.overflow-hidden {
+    overflow: hidden;
+}
+
+.overflow-y-auto {
+    overflow-y: auto;
+}
+
+.scrollbar-thin {
+    scrollbar-width: thin;
+}
+
+.scrollbar-thumb-gray-400::-webkit-scrollbar-thumb {
+    background-color: #a0aec0;
+}
+
+.scrollbar-track-gray-100::-webkit-scrollbar-track {
+    background-color: #edf2f7;
+}
+
+/* Utility Classes */
+.shadow-md {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.mt-3 {
+    margin-top: 0.75rem;
+}
+
+.font-semibold {
+    font-weight: 600;
+}
+
+.text-sm {
+    font-size: 0.875rem;
+}
+
+.text-blue-600 {
+    color: #3182ce;
+}
+
+.font-extrabold {
+    font-weight: 800;
+}
+
+.py-10 {
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+}
+
+.px-6 {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+}
+
+.header-section h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.header-section p {
+    font-size: 1.2rem;
+}
+
+.feature-section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.feature-item {
+    background: #f0f0f0;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.feature-item h3 {
+    font-size: 1.25rem;
+    color: #333;
+}
+
+.header-section {
+    background: linear-gradient(to right, #a0bddc, #d6e2eb);
+    color: white;
+    padding: 20px;
+    text-align: center;
+    border-radius: 8px;
+    width: 100%;
+}
+
+.header-section h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.header-section p {
+    font-size: 1.2rem;
+}
+
+.feature-section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.feature-item {
+    background: #f0f0f0;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.feature-item h3 {
+    font-size: 1.25rem;
+    color: #333;
+}
+
+/* Video Section: Your Personal Credit App */
+.video-content-section {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
+    padding: 2rem;
+    justify-content: center; /* Center content on smaller screens */
+    align-items: center; /* Align items vertically */
+}
+
+.video-container {
+    flex: 1; /* Allow the video container to grow and shrink */
+    max-width: 30%; /* Limit the width of the video container */
+    margin-left: 150px; /* Margin for larger screens */
+}
+
+.video {
+    width: 100%; /* Make the video scale with the container */
+    max-width: 500px; /* Limit the maximum width */
+    border-radius: 10px; /* Rounded corners */
+    height: auto; /* Maintain aspect ratio */
+}
+
+/* Content Section */
+.content-container {
+    flex: 1; /* Allow the content container to grow and shrink */
+    max-width: 50%; /* Limit the width of the content container */
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: flex-start; /* Align items to the left */
+    gap: 20px; /* Space between elements */
+}
+
+.header-section h2,
+.header-section p {
+    margin-bottom: 1rem; /* Space below each element */
+}
+
+.feature-section {
+    margin-top: 2rem; /* Space above feature section */
+}
+
+.feature-item {
+    margin-bottom: 1.5rem; /* Space below each feature */
+}
+
+/* Card Hover Effect */
+.card:hover {
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15); /* Smooth hover effect */
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+/* Responsive Adjustments */
+
+/* For tablets and smaller laptops */
+@media (max-width: 1024px) {
+    .video-container {
+        max-width: 50%; /* Increase video width for medium screens */
+        margin-left: 50px; /* Adjust margin */
+    }
+
+    .content-container {
+        max-width: 80%; /* Expand content container for better readability */
+    }
+}
+
+/* For mobile devices */
+@media (max-width: 768px) {
+    .video-content-section {
+        flex-direction: column; /* Stack video and content vertically */
+        padding: 1rem; /* Reduce padding for smaller screens */
+    }
+
+    .video-container {
+        max-width: 80%; /* Allow video to occupy more width */
+        margin-left: 0; /* Remove left margin */
+        margin-bottom: 1rem; /* Add spacing below video */
+    }
+
+    .content-container {
+        max-width: 90%; /* Allow content to take up more space */
+        align-items: center; /* Center align content */
+        text-align: center; /* Center text */
+    }
+}
+
+/* For very small screens (e.g., smartphones) */
+@media (max-width: 480px) {
+    .video-container {
+        max-width: 0%; /* Full width for very small screens */
+        margin: 100 auto; /* Center the video */
+    }
+
+    .video {
+        max-width: 10%; /* Ensure the video fits the screen width */
+        height: auto; /* Maintain aspect ratio */
+    }
+
+    .content-container {
+        max-width: 100%; /* Full width for content */
+    }
+}
+
+/* Smooth Animations */
+body {
+    scroll-behavior: smooth;
+}
+
+/* Section Spacing */
+.features-section {
+    padding: 4rem 2rem; /* Padding for features section */
+}
+.cards-section {
+    animation: cardBackgroundAnimation 5s ease-in-out infinite;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    gap: 15px; /* Adjust the gap between the cards */
+    padding: 20px;
+    overflow-x: auto; /* Allow horizontal scrolling if the content overflows */
+    width: 100%; /* Set the section width to 95% */
+    align-items: flex-end; /* Align cards to the bottom */
+}
+
+.card {
+    position: relative;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 230px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    flex-shrink: 0; /* Prevent the cards from shrinking */
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.icon-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    padding: 15px;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease; /* Add smooth hover transition */
+}
+
+/* Default icon color */
+.card .icon-container i {
+    color: #3e3bac; /* Default color for the icon */
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+/* Hover effect only on the icon */
+.card:hover .icon-container i {
+    color: #faa505; /* Lighter color for the icon when hovered */
+    transform: scale(1.1); /* Optional: icon size increase on hover */
+}
+
+/* Optional: If you want to apply different colors on hover to different cards */
+.card-1:hover .icon-container i {
+    color: #da47a3; /* Lighter color for the icon in card 1 */
+}
+
+.card-2:hover .icon-container i {
+    color: #bb2c45; /* Lighter color for the icon in card 2 */
+}
+
+.card-3:hover .icon-container i {
+    color: #803f92; /* Lighter color for the icon in card 3 */
+}
+
+/* If you want to apply a transform effect like zoom on hover */
+.card:hover .icon-container {
+    transform: scale(
+        1.1
+    ); /* Optional: slight zoom effect for the icon container */
+}
+
+.card-content {
+    padding: 10px;
+}
+
+.card-title {
+    font-size: 20px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.card-text {
+    font-size: 16px;
+    color: #666;
+}
+
+/* Card Specific Styles with different heights */
+.card-1 {
+    height: 350px;
+    background: linear-gradient(to right, #f8f9fa, #e9ecef);
+}
+
+.card-2 {
+    height: 320px;
+    background: linear-gradient(to right, #f0f4f8, #d3e0e9);
+}
+
+.card-3 {
+    height: 290px;
+    background: linear-gradient(to right, #fff, #f0f8ff);
+}
+
+.card-4 {
+    height: 320px;
+    background: linear-gradient(to right, #e8f5e9, #c8e6c9);
+}
+
+.card-5 {
+    height: 350px;
+    background: linear-gradient(to right, #fff3e0, #fdd835);
+}
+
+/* V-shape effect for cards */
+.card-1 {
+    margin-bottom: 0; /* First card at the base */
+}
+
+.card-2 {
+    margin-bottom: 0px; /* Second card slightly raised */
+}
+
+.card-3 {
+    margin-bottom: 0px; /* Third card more raised */
+}
+
+.card-4 {
+    margin-bottom: 0px; /* Fourth card even more raised */
+}
+
+.card-5 {
+    margin-bottom: 0px; /* Fifth card at the top of the V */
+}
+
+/* Optional: Add hover effect on the V-shape to make it interactive */
+.card-1:hover,
+.card-2:hover,
+.card-3:hover,
+.card-4:hover,
+.card-5:hover {
+    transform: scale(1.05);
+}
+/* What Sets Us Apart Section */
+.what-sets-us-apart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 30px; /* Adjusted margin for better spacing */
+  padding: 0 10px; /* Add padding for smaller screens */
+}
+
+.sets-us-apart-title {
+  font-size: 3rem;
+  font-weight: bold;
+  color: red;
+}
+.value {
+  width: 300px;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  background-color: white;
+  transition: transform 0.3s ease-in-out;
+}
+
+.value:hover {
+  transform: scale(1.05);
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .values-section {
+    flex-direction: column; /* Stack the values vertically */
+    align-items: center;
+    gap: 30px; /* Larger gap between items for readability */
+  }
+
+  .value {
+    max-width: 95%; /* Expand value cards to nearly full width */
+    margin: 0 auto; /* Center the cards */
+  }
+
+  .sets-us-apart-title {
+    font-size: 1.8rem; /* Slightly smaller title */
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .value h3 {
+    font-size: 1.2rem; /* Smaller heading for very small screens */
+  }
+
+  .value p {
+    font-size: 0.9rem; /* Adjust paragraph font size */
+  }
+
+  .value {
+    max-width: 100% !important; /* Use full width for very small screens */
+    padding: 15px; /* Slightly reduce padding */
+  }
+
+  .what-sets-us-apart {
+    margin-bottom: 20px;
+  }
+
+  .sets-us-apart-title {
+    font-size: 1.5rem;
+  }
+}
+
+/* Apply Now Button */
+.btn-apply {
+  background: #7D7D7D;
+  color: white;
+  padding: 8px 20px;
+  border-radius: 50px;
+  font-weight: 600;
+  box-shadow: 0px 4px 8px rgba(255, 255, 255, 0.4);
+  transition: background 0.3s ease;
+  font-size: 14px;
+}
+
+.btn-apply:hover {
+  background: #6C6A6A;
+}
+
+/* Learn More Button */
+.btn-learn {
+  background: none;
+
+  border: 2px solid #7D7D7D;
+  color:  black;
+  padding: 8px 20px;
+  border-radius: 50px;
+  font-weight: 600;
+  box-shadow: 0px 4px 8px rgba(255, 255, 255, 0.4);
+  transition: background 0.3s ease, color 0.3s ease;
+  font-size: 14px;
+}
+
+.btn-learn:hover {
+  background: #F0F0F0;
+  color: #5E5E5E;
+}
+.image-content-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px; /* Space between image & text */
+  padding: 50px;
+}
+
+.image-container {
+  width: 40%; /* Adjust image width */
+  display: flex;
+  justify-content: center;
+}
+
+.floating-image {
+  width: 80%; /* Adjust image size */
+  filter: drop-shadow(10px 10px 30px rgba(255, 255, 255, 0.6)); /* White shadow effect */
+}
+
+.content-container {
+  width: 50%;
+}
+
+.content-container h2 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.content-container p {
+  font-size: 1.2rem;
+  color: #666;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .image-content-section {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .image-container,
+  .content-container {
+    width: 90%;
+  }
+
+  .floating-image {
+    width: 60%;
+  }
+}
+/* Section Wrapper */
+/* Section Wrapper */
+.what-sets-us-aparts {
+  text-align: center;
+  padding: 50px 10px;
+  position: relative;
+  height: 500px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: -100px !important;
+  background-color: #f8f9fa;
+  border-radius: 40px;
+  transition: all 1s ease;
+  
+}
+
+/* Title Styling */
+.sets-us-apart-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Content Wrapper */
+.content-wrappers {
+  z-index: 2;
+  width: 50%;
+  padding-right: 50px;
+  margin-left: 50px;
+  flex-grow: 1; /* Ensures it occupies available space */
+}
+
+/* Content Text Styling */
+.content-text {
+  padding-right: 20px;
+}
+
+.content-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: center !important;
+  margin-top: -50px !important;
+  z-index: 1;
+  color: #0c0c0c;
+}
+
+.content-description {
+  font-size: 1.2rem;
+  color: #444;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.content-description b {
+  font-size: 1.4rem;
+  color: #0c0c0c;
+}
+
+/* Hero Image Styling */
+.hero-image-wrapper {
+  width: 50%; /* Take up half of the section */
+}
+
+.hero-image {
+  width: 60%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 1;
+  transition: all 1s ease;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .what-sets-us-aparts {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .content-wrapper {
+    width: 100%;
+    padding-right: 0;
+  }
+
+  .hero-image {
+    height: auto;
+  }
+}
+
+.action-button {
+  display: flex;
+  justify-content: flex-start; /* Aligns buttons to the left */
+  align-items: center;
+  margin-top: 20px;
+  margin-left: 130px;
+  gap: 20px !important;
+}
+
+.btn-applys, .btn-learns {
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  border: none;
+  cursor: pointer;
+  background-color: #303132; /* Keeping the grey color */
+  color: white;
+  transition: all 0.3s ease;
+  border-radius: 30px;
+}
+
+/* .btn-apply:hover, .btn-learn:hover {
+  opacity: 0.8;
+} */

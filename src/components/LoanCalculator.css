@@ -1,0 +1,573 @@
+.loan-calculator {
+    font-family: "Arial", sans-serif;
+    padding: 20px;
+    background-color: #f9f9f9; /* Light grey background for the section */
+    border-radius: 8px;
+}
+
+.slider:hover {
+    opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #b0b0b0; /* Grey thumb */
+    cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #b0b0b0; /* Grey thumb */
+    cursor: pointer;
+}
+
+.limits {
+    font-size: 14px;
+    color: #a0a0a0; /* Soft grey text */
+    margin-top: 30px;
+    text-align: center;
+}
+
+.emi-range {
+    background: #ffffff;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    width: 45%;
+    margin-left: 10px;
+    height: 560px;
+
+}
+
+.emi-circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #ffffff;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    width: 45%;
+    margin-left: 10px;
+    height: 560px;
+}
+.emi-circle canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+@media (max-width: 768px) {
+  .emi-circle {
+      max-width: 300px; /* Adjust the size for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .emi-circle {
+      max-width: 200px; /* Further adjust size for very small screens */
+  }
+}
+.results {
+    margin-top: 20px !important;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.results-title {
+    font-size: 26px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 25px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+.grid-item {
+    background-color: #f5f5f5; /* Very light grey background for grid items */
+    border-radius: 12px;
+    padding: 15px 20px;
+    border: 1px solid #e0e0e0; /* Light grey border */
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-align: center;
+}
+
+.grid-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+}
+
+.grid-icon {
+    font-size: 30px;
+    color: #181414; /* Soft grey for icons */
+    margin-bottom: 10px;
+}
+
+.grid-label {
+    font-size: 16px;
+    font-weight: bold;
+    color: #a0a0a0; /* Soft grey for label text */
+}
+
+.grid-value {
+    font-size: 22px;
+    font-weight: bold;
+    color: #333; /* Dark grey for values */
+    margin-top: 5px;
+}
+
+@media (max-width: 768px) {
+    .results {
+        padding: 15px;
+    }
+
+    .grid-container {
+        grid-template-columns: 1fr;
+    }
+
+    .grid-item {
+        padding: 10px 15px;
+    }
+}
+.slider-container {
+    position: relative;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+
+
+.slider-scale {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    top: 20px; /* Adjust to position the scale correctly */
+    width: 100%;
+    font-size: 12px;
+    color: #555;
+}
+
+
+.calculation-section {
+    margin-bottom: 30px;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #9AA6B2;
+    cursor: pointer;
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 8px;
+    background: #9AA6B2;
+    border-radius: 5px;
+}
+
+input[type="range"]:focus {
+    outline: none;
+}
+/* Interest Rate Scale */
+.slider-scale-interest {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    top: 20px; /* Adjust to position the scale correctly */
+    width: 100%;
+    font-size: 12px;
+    color: #555;
+}
+
+.scale-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.tick {
+    width: 2px;
+    height: 12px;
+    background-color: #555;
+}
+
+.scale-label {
+    margin-top: 5px;
+    font-size: 12px;
+}
+
+.slider-value {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    margin-top: 10px;
+}.slider {
+  width: 100%;
+  margin: 10px 0;
+  appearance: none;
+  height: 8px;
+  border-radius: 5px;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  transition: 0.3s ease;
+}
+
+.slider::-webkit-slider-thumb {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #b0b0b0;
+  cursor: pointer;
+  margin-top: -6px; /* Align thumb properly */
+}
+
+.slider::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #b0b0b0;
+  cursor: pointer;
+  margin-top: -6px; /* Align thumb properly */
+}
+
+.block-title {
+  margin-top: 50px; /* Adds space from the top */
+  margin-bottom: 30px; /* Adds space at the bottom */
+  padding: 30px 15px; /* Adds padding to make the text appear centered */
+  border-radius: 10px; /* Rounded corners */
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition */
+  opacity: 0; /* Initially hidden for animation */
+  animation: fadeIn 1.5s ease-in-out forwards, bounce 1s ease-in-out 1.5s; /* Animation */
+}
+
+.block-title:hover {
+  transform: translateY(-5px); /* Slight lift effect */
+}
+
+.block-title h1 {
+  font-family: 'Arial', sans-serif; /* Modern font family */
+  font-size: 36px; /* Larger font size */
+  color: #333; /* Dark text color */
+  font-weight: bold; /* Make the text bold */
+  letter-spacing: 1px; /* Slight spacing between letters */
+  text-transform: uppercase; /* Make the text all uppercase */
+}
+
+.block-title b {
+  color: black; /* Green color for the bold text */
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Bounce Animation */
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px); /* Bounce upwards */
+  }
+  100% {
+    transform: translateY(0); /* Return to original position */
+  }
+}
+
+/* How It Works Section */
+.how-it-works {
+  background-color: #f9f9f9;
+  padding: 50px 0;
+}
+
+.section-header {
+  margin-bottom: 40px;
+}
+
+.how-it-works-title h1 {
+  font-size: 36px;
+  color: #333;
+}
+
+.steps-zigzag {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  width: 100%;
+}
+
+.step {
+  width: 80%;
+  max-width: 600px;
+  background-color: #fff;
+  padding: 20px;
+  margin: 20px 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.step-number {
+  background-color: #007bff;
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  margin-bottom: 15px;
+}
+
+.step-title {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.step p {
+  font-size: 14px;
+  color: #555;
+  line-height: 1.5;
+}
+
+/* Zigzag position - Left side steps */
+.step.left {
+  transform: translateX(-20%);
+}
+
+/* Zigzag position - Right side steps */
+.step.right {
+  transform: translateX(20%);
+}
+
+/* On hover, move the steps to their natural positions */
+.step:hover {
+  transform: translateX(0);
+}
+
+/* Optional: Add a connector line between the steps */
+.steps-zigzag::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 2px;
+  height: 100%;
+  background-color: #007bff;
+  transform: translateX(-50%);
+  z-index: -1;
+}
+@media (max-width: 1024px) {
+  /* Adjust layout for tablet and medium-sized screens */
+  .emi-range, .emi-circle {
+      width: 100%;
+      margin-left: 0;
+      height: auto; /* Allow height to adjust */
+  }
+  .grid-container {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 15px;
+  }
+  .slider-container {
+      margin-bottom: 15px;
+  }
+  .results-title {
+      font-size: 22px;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Adjust layout for mobile screens */
+  .emi-range, .emi-circle {
+      width: 100%;
+      margin-left: 0;
+      height: auto; /* Allow height to adjust */
+      padding: 15px;
+  }
+
+  .grid-container {
+      grid-template-columns: 1fr;
+      gap: 10px;
+  }
+
+  .grid-item {
+      padding: 10px;
+  }
+
+  .results-title {
+      font-size: 20px;
+  }
+
+  .slider {
+      width: 100%;
+      height: 6px;
+  }
+
+  .slider::-webkit-slider-thumb {
+      width: 18px;
+      height: 18px;
+  }
+
+  .slider::-moz-range-thumb {
+      width: 18px;
+      height: 18px;
+  }
+
+  .slider-scale,
+  .slider-scale-interest {
+      font-size: 10px;
+  }
+
+  .slider-value {
+      font-size: 14px;
+  }
+
+  .block-title h1 {
+      font-size: 28px;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Adjust layout for smaller mobile screens */
+  .emi-range, .emi-circle {
+      width: 100%;
+      margin-left: 0;
+      height: auto;
+      padding: 10px;
+  }
+
+  .results {
+      padding: 10px;
+  }
+
+  .grid-container {
+      grid-template-columns: 1fr;
+      gap: 10px;
+  }
+
+  .grid-item {
+      padding: 8px;
+  }
+
+  .results-title {
+      font-size: 18px;
+  }
+
+  .slider {
+      width: 100%;
+      height: 6px;
+  }
+
+  .slider::-webkit-slider-thumb {
+      width: 16px;
+      height: 16px;
+  }
+
+  .slider::-moz-range-thumb {
+      width: 16px;
+      height: 16px;
+  }
+
+  .slider-value {
+      font-size: 14px;
+  }
+
+  .block-title h1 {
+      font-size: 24px;
+  }
+}
+/* GIF Container */
+.video-container {
+  position: relative;
+  display: inline-block;
+  max-width: 90%;
+  overflow: hidden;
+  border-radius: 15px; /* Rounded corners */
+  margin: 20px 62px; /* Center alignment */
+  padding: 10px;
+  animation: fadeIn 1s ease-in-out; /* Fade-in animation */
+  height: 600px;
+  margin-top: -70px;
+}
+
+/* GIF Styling */
+.loan-calculator-gif {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px; /* Rounded corners for the GIF */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effects */
+}
+
+/* Hover Effect */
+.loan-calculator-gif:hover {
+  transform: scale(1.05); /* Slight zoom on hover */
+}
+
+/* Animation for the container */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .video-container {
+    padding: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .video-container {
+    padding: 8px;
+    margin-bottom: -60%;
+  }
+
+  .loan-calculator-gif {
+    border-radius: 10px;
+    /* width: 700px !important; */
+    height: 350px;
+    margin-bottom: 0;
+  }
+}
+
+
+

@@ -1,0 +1,194 @@
+
+body, html {
+    margin: 0;
+    padding: 0;
+}
+
+/* Testimonial Section */
+.testimonial-section {
+    padding: 50px 20px;
+    background: linear-gradient(135deg, #faf9f6, #f1efe9);
+    border-radius: 20px;
+    text-align: center;
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+}
+
+.testimonial-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Image Styles */
+.testimonial-image img {
+    width: 600px; /* Large image size */
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    margin-right: 30px;
+    opacity: 0;
+    transform: translateX(-100%);
+    animation: imageSlideIn 1s ease-out forwards;
+}
+
+/* Content Styles */
+.testimonial-content {
+    max-width: 500px;
+    text-align: left;
+    padding: 20px;
+    opacity: 0;
+    transform: translateX(100%);
+    animation: contentSlideIn 1s ease-out forwards;
+    animation-delay: 0.5s; /* Content appears slightly after image */
+}
+
+.testimonial-text {
+    font-size: 18px;
+    font-style: italic;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.testimonial-info {
+    margin-bottom: 20px;
+}
+
+.testimonial-name {
+    font-size: 20px;
+    font-weight: bold;
+    color: #4d4a44;
+}
+
+.testimonial-company {
+    font-size: 16px;
+    color: #7a746d;
+}
+
+.testimonial-icons {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.icon {
+    font-size: 24px;
+    color: #8e7d70;
+}
+
+.heart {
+    color: #eb0606; /* Red color for the heart icon */
+}
+
+.moneytap {
+    color: #00c7c7;
+}
+
+/* Header with icons styling */
+.testimonial-header .header-text {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+}
+
+.testimonial-header .heart-icon {
+    color: #eb0606; /* Red color for the heart icon */
+}
+
+.testimonial-header .moneytap-icon {
+    color: #00c7c7;
+}
+
+/* Next Button */
+.next-button {
+    background: none;
+    border: 2px solid #8e7d70;
+    padding: 10px 20px;
+    font-size: 20px;
+    cursor: pointer;
+    color: #8e7d70;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+}
+
+.next-button:hover {
+    background-color: #8e7d70;
+    color: #fff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .testimonial-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .testimonial-image img {
+        width: 100%;
+        max-width: 500px;
+    }
+}
+
+/* Animation for fade-in effect */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Animation for image sliding in from the left */
+@keyframes imageSlideIn {
+    0% {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Animation for content sliding in from the right */
+@keyframes contentSlideIn {
+    0% {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Next and Previous Button Styles */
+.testimonial-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.next-button {
+    background: none;
+    border: 2px solid #8e7d70;
+    padding: 10px 20px;
+    font-size: 20px;
+    cursor: pointer;
+    color: #8e7d70;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+}
+
+.next-button:hover {
+    background-color: #8e7d70;
+    color: #fff;
+}
+
+.next-button svg {
+    font-size: 24px;
+}

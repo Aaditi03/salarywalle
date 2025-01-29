@@ -1,0 +1,108 @@
+/* Footer Wrapper */
+.footer-wrapper {
+  background: transparent; /* Ensures no background */
+  box-shadow: slategrey; 
+  padding: 40px 20px;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Footer Grid */
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+/* Footer Section */
+.footer-section {
+  text-align: left;
+  margin-left: 40px;
+}
+
+.footer-logo {
+  width: 150px;
+  margin-bottom: 10px;
+}
+
+/* Footer Text */
+.footer-text {
+  font-size: 14px;
+  color: #666;
+  line-height: 1.6;
+}
+
+/* Section Titles */
+.footer-section h4 {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* Links */
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 8px;
+}
+
+.footer-section ul li a {
+  text-decoration: none;
+  color: #007bff;
+  font-size: 14px;
+}
+
+.footer-section ul li a:hover {
+  text-decoration: underline;
+}
+
+/* Contact Info */
+.contact-info ul li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.contact-info .icon {
+  margin-right: 10px;
+  color: #007bff;
+}
+
+/* Footer Bottom */
+.footer-bottom {
+  text-align: center;
+  padding-top: 20px;
+  border-top: 1px solid #ddd;
+}
+
+.footer-bottom p {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.social-icons a {
+  margin: 0 8px;
+  color: #007bff;
+  font-size: 18px;
+  transition: color 0.3s;
+}
+
+.social-icons a:hover {
+  color: #0056b3;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-section {
+    text-align: center;
+  }
+}

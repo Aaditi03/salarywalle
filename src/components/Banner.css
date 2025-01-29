@@ -1,0 +1,156 @@
+/* General Styling */
+.banner-section {
+    padding: 40px 20px;
+    position: relative; /* To position the overlay */
+    overflow: hidden;
+}
+
+.banner-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 20px;
+    z-index: 2; /* Ensure content stays above the background */
+}
+
+/* GIF Section */
+.left-side {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner-gif {
+    max-width: 100%;
+    height: auto;
+    margin-top: -20px;
+}
+
+/* Text Section */
+.right-side {
+    flex: 1;
+}
+
+.banner-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #a39e9d; /* Primary logo color */
+    margin-bottom: 15px;
+    margin-top: -20px;
+}
+
+.banner-description {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+/* Point-Wise Section */
+.points-section {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Point Styling */
+.point {
+    position: relative;
+    padding: 15px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #555; /* Text color */
+    background-color: #fff; /* White background */
+    border: 3.5px solid transparent; /* Default border is transparent */
+    border-radius: 5px; /* Curved border with a large radius */
+    background-clip: padding-box; /* Ensures background doesn't interfere with the border */
+    cursor: pointer;
+    transition: transform 0.5s ease, box-shadow 0.3s ease,
+        background-position 3s;
+    border-image: linear-gradient(
+            135deg,
+            #3e3bac,
+            #faa505,
+            #da47a3,
+            #bb2c45,
+            #803f92,
+            #821f40
+        )
+        1; /* Apply gradient only to the border */
+}
+
+.point:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    background-position: right center; /* Smooth gradient shift on hover */
+}
+
+/* Animations */
+.point-left {
+    animation: slideInLeft 1s ease-in-out;
+}
+
+.point-right {
+    animation: slideInRight 1s ease-in-out;
+}
+
+@keyframes slideInLeft {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Point Content */
+.point-content {
+    z-index: 1;
+    display: inline-block;
+    padding: 5px 10px;
+    /* background-color: rgba(204, 12, 12, 0.2); */
+    /* border-radius: 30px; */
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+/* Overlay Styling */
+.banner-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.1); /* Black overlay with 10% opacity */
+    z-index: 1; /* Ensure overlay is behind the content */
+    pointer-events: none; /* Allow interaction with underlying content */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .banner-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .points-section {
+        gap: 15px;
+    }
+}

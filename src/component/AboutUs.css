@@ -1,0 +1,340 @@
+/* General Styling */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+  }
+  
+  /* Hero Section */
+  .hero-section {
+    /* background: linear-gradient(135deg, #d7e9f7, #fff); */
+    text-align: center;
+    padding: 10px ;
+  }
+  
+  .hero-title {
+    font-size: 3rem;
+    font-weight: bold;
+    margin: 0;
+    color: rgb(100, 97, 97)
+  }
+  
+  .hero-subtitle {
+    font-size: 1.2rem;
+    margin-top: 10px;
+    color: #666;
+  }
+  
+  /* About Section */
+  .about-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 50px 20px;
+    /* background: #f9f9f9; */
+  }
+  
+  .about-content {
+    max-width: 500px;
+  }
+  
+  .about-image {
+    width: 500px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Vision Section */
+  .vision-section {
+    /* background: #eef7ff; */
+    text-align: center;
+    padding: 50px 20px;
+  }
+  
+  .vision-title {
+    font-size: 2.5rem;
+    /* margin-bottom: 20px; */
+    color: rgb(100, 97, 97);
+    font-weight: bold; /* Makes the text bold */
+
+  }
+  
+  .vision-text {
+    font-size: 1rem;
+    color: #333;
+  }
+  
+/* Values Section */
+/* Values Section */
+.values-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 50px 20px;
+  gap: 20px; /* Add gap for spacing */
+}
+
+.value {
+  max-width: 30%;
+  text-align: center;
+  margin: 0 auto 20px auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px; /* Add padding for better spacing */
+  border-radius: 10px; /* Add rounded corners for a modern look */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for better visibility */
+  /* background: #fff;  */
+}
+
+.value h3 {
+  font-size: 1.3rem; /* Slightly smaller heading for responsiveness */
+  color: #444;
+  margin-top: 20px; /* Adjust margin for smaller screens */
+  font-weight: bold;
+}
+
+.value p {
+  font-size: 1rem;
+  color: #666;
+  margin-top: 10px;
+}
+
+/* What Sets Us Apart Section */
+.what-sets-us-apart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 30px; /* Adjusted margin for better spacing */
+  padding: 0 10px; /* Add padding for smaller screens */
+}
+
+.sets-us-apart-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #444;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .values-section {
+    flex-direction: column; /* Stack the values vertically */
+    align-items: center;
+    gap: 30px; /* Larger gap between items for readability */
+  }
+
+  .value {
+    max-width: 95%; /* Expand value cards to nearly full width */
+    margin: 0 auto; /* Center the cards */
+  }
+
+  .sets-us-apart-title {
+    font-size: 1.8rem; /* Slightly smaller title */
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .value h3 {
+    font-size: 1.2rem; /* Smaller heading for very small screens */
+  }
+
+  .value p {
+    font-size: 0.9rem; /* Adjust paragraph font size */
+  }
+
+  .value {
+    max-width: 100% !important; /* Use full width for very small screens */
+    padding: 15px; /* Slightly reduce padding */
+  }
+
+  .what-sets-us-apart {
+    margin-bottom: 20px;
+  }
+
+  .sets-us-apart-title {
+    font-size: 1.5rem;
+  }
+}
+
+  
+  /* Background Video */
+.background-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+
+  }
+  
+  /* Content Wrapper */
+  .content-wrapper {
+    position: relative;
+    z-index: 1;
+    color: white;
+    padding: 20px;
+  }
+  .hero-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 20px;
+    height: 100vh;
+    /* background: linear-gradient(to bottom, #1e3c72, #2a5298); */
+    color: white;
+    padding: 40px;
+  }
+  
+  .hero-content {
+    max-width: 600px;
+  }
+  
+  /* Base styles */
+.hero-section {
+  padding: 50px 20px; /* Padding around the section */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.hero-title {
+  font-size: 3.4rem; /* Title size */
+  font-weight: bold; /* Bold font weight */
+  margin-bottom: 30px; /* Space below the title */
+  color: #2D3E50; /* Darker color for the title */
+  text-align: center; /* Center the title */
+  margin-top: 100px; /* Space above the title */
+}
+
+.hero-description {
+  font-size: 1.1rem; /* Description size */
+  font-family: 'Roboto', sans-serif; /* Font family */
+  line-height: 1.6; /* Line height for better readability */
+  margin: 0 auto; /* Center the paragraph */
+  max-width: 800px; /* Limit the width of the paragraph */
+  padding: 0 20px; /* Add padding for smaller screens */
+  text-align: justify; /* Justify text for a cleaner look */
+  color: #555; /* Slightly lighter color for the description */
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 1200px) {
+  .hero-title {
+    font-size: 2.8rem; /* Smaller title size for medium screens */
+
+  }
+
+}
+
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2.2rem; /* Smaller title size for tablets */
+    margin-top: 60px; /* Adjust top margin */
+  }
+  @media (max-width: 480px) {
+    .hero-section {
+      padding: 20px 5px; /* Further adjust padding for mobile */
+    }
+  }
+  .hero-description {
+    font-size: 0.95rem; /* Smaller description size for tablets */
+    padding: 0 10px; /* Less padding for smaller screens */
+
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 1.8rem; /* Smaller title size for mobile */
+    margin-top: 40px; /* Adjust top margin */
+  }
+
+  .hero-description {
+    font-size: 0.9rem; /* Smaller description size for mobile */
+    padding: 0 5px; /* Less padding for mobile */
+  }
+}
+  .hero-media {
+    text-align: center;
+    opacity: 0.6;
+  }
+  
+  .hero-video {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  }
+  
+  .media-caption {
+    margin-top: 10px;
+    font-size: 1rem;
+    font-style: italic;
+    color: #c02929;
+    color: #333;
+  }
+  
+  
+  .hero-title {
+    font-size: 3rem;
+    font-weight: bold;
+    margin: 0;
+  }
+  
+  .hero-subtitle {
+    font-size: 1.2rem;
+    margin-top: 10px;
+  }
+  
+  /* About Section */
+  .about-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 50px 0;
+  }
+  
+  .about-content {
+    max-width: 50%;
+  }
+  
+  .about-image {
+    max-width: 45%;
+    border-radius: 10px;
+  }
+  
+  /* Vision Section */
+  .vision-section {
+    text-align: center;
+    margin: 50px 0;
+  }
+  
+  .vision-title {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  
+  .vision-text {
+    font-size: 1.2rem;
+    line-height: 1.6;
+  }
+  
+  /* Values Section */
+  .values-section {
+    display: flex;
+    justify-content: space-around;
+    margin: 50px 0;
+  }
+  
+  .value {
+    max-width: 30%;
+    text-align: center;
+  }
+.paragrph{
+  color: rgb(8, 7, 7);
+}

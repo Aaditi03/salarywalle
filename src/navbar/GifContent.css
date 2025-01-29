@@ -1,0 +1,173 @@
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/* Container for GIF and content */
+.main-content-container {
+    display: flex; /* Align items side by side */
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px; /* Reduced gap between content and GIF */
+    padding: 30px;
+    border-radius: 12px;
+    max-width: 1200px;
+    margin: 50px auto;
+    opacity: 0;
+    animation: fadeIn 1s forwards, slideInFromLeftRight 1.5s forwards;
+    /* height: 700px; */
+}
+
+/* Adjust the width for each part */
+.gif-part, .content-part {
+    width: 50%;
+}
+
+/* Styling for GIF */
+.banner-gif {
+    width: 80%;
+    /* height: auto; */
+    /* max-height: 800px;  */
+    object-fit: cover;
+    border-radius: 8px;
+    animation: fadeIn 1.5s ease-in-out; /* Animation for GIF */
+    opacity: 0;
+    animation: slideInFromLeft 1.5s forwards;
+}
+
+/* Styling for content */
+.content-part {
+    font-size: 1rem;
+    color: #222; /* Standard dark gray */
+    padding: 20px;
+    opacity: 0;
+    animation: fadeInUp 1.5s 0.5s forwards, slideInFromRight 1.5s forwards;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #f7fafc, #e9ecef); /* Light gray gradient for content */
+}
+
+/* Header animation */
+.animated-header {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #0a0a0b; /* Standard blue */
+    opacity: 0;
+    animation: slideInLeft 1s forwards;
+    margin-bottom: 15px;
+}
+
+/* Text animation */
+.animated-text {
+    opacity: 0;
+    animation: fadeInUp 1.5s 0.5s forwards;
+    margin-bottom: 15px; /* Reduced bottom margin for a compact layout */
+    color: #4a4646; /* Neutral gray */
+}
+
+/* Step feature section animation */
+.animated-step {
+    opacity: 0;
+    animation: fadeInUp 1s 1s forwards;
+    margin-bottom: 15px; /* Reduced bottom margin */
+    padding: 20px;
+    border-radius: 8px;
+    background: linear-gradient(135deg, #f8f9fa, #dfe4ea); /* Subtle gradient background */
+    transition: all 0.3s ease;
+}
+
+/* Feature hover effect */
+.animated-step:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Light hover shadow */
+}
+
+.feature svg {
+    font-size: 2rem;
+    margin-right: 10px;
+    color: #C2C2C2; /* Icon color */
+}
+
+.feature h3 {
+    font-size: 1.2rem;
+    color: #8a8787; /* Standard blue for headers */
+    font-weight: bold;
+}
+
+.feature p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #555; /* Lighter gray for body text */
+}
+
+/* Keyframes for animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInFromLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInFromRight {
+    from {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .main-content-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .gif-part, .content-part {
+        width: 100%;
+        margin-top: 10px; /* Reduced spacing for mobile */
+    }
+
+    /* Adjust GIF size for mobile */
+    /* .banner-gif { */
+        /* max-height: 300px; */
+    /* } */
+}
